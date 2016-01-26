@@ -1,0 +1,19 @@
+.row
+  .col-xs-12
+    h1 MyBeacon
+    form
+      .form-group
+        label Identifier
+        input.form-control(type='text', ng-model='region.identifier')
+      .form-group
+        label UUID
+        input.form-control(type='text', ng-model='region.uuid')
+      .form-group
+        label Major
+        input.form-control(type='text', ng-model='region.major')
+      .form-group
+        label Minor
+        input.form-control(type='text', ng-model='region.minor')
+      
+      button.btn.btn-default(type='button', ng-click='onStopClick()') Stop
+      button.btn.btn-primary(type='button', ng-click='onBroadcastClick()') Broadcast

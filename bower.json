@@ -1,0 +1,30 @@
+{
+  "name": "parcmate-mybeacon",
+  "version": "1.0.0",
+  "description": "Parcmate iBeacon Simulator",
+  "license": "UNLICENSED",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "lodash": "~3.10.1",
+    "angular": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "ngCordova": "~0.1.24-alpha",
+    "angular-local-storage": "~0.2.3",
+    "bootstrap-stylus": "~5.0.2"
+  },
+  "overrides": {
+    "angular": {
+      "dependencies": {
+        "jquery": "*"
+      }
+    }
+  }
+}
