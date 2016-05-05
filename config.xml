@@ -20,15 +20,17 @@
 <widget id="com.parcmate.mybeacon" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>MyBeacon</name>
     <description>
-        A simple iBeacon broadcaster.
+        A simple iBeacon test tool.
     </description>
-    <author email="info@parcmate.com" href="http://www.parcmate.com">
+    <author email="info@parkwithspaces.com" href="http://www.parkwithspaces.com">
         Parcmate LLC
     </author>
     <content src="index.html" />
     
     <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
     <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-geolocation" spec="~2.1.0" />
+    <plugin name="com.unarin.cordova.beacon" spec="https://github.com/petermetz/cordova-plugin-ibeacon.git" />
     
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -37,6 +39,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <allow-navigation href="*://*/*" />
     
     <platform name="android">
         <allow-intent href="market:*" />

@@ -26,7 +26,7 @@ module.exports = function(grunt) {
         bowerOptions: {
           relative: false
         },
-        include: ['jquery', 'lodash', 'angular', 'angular-ui-router', 'angular-local-storage', 'ngCordova'],
+        include: ['jquery', 'lodash', 'angular', 'angular-ui-router', 'angular-local-storage', 'angular-deferred-bootstrap', 'ngCordova'],
         mainFiles: {
         }
       }

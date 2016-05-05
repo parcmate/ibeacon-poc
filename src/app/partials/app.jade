@@ -1,23 +1,32 @@
-.row
+.row.app
   .col-xs-12
-    h1 MyBeacon
-    form
-      .form-group
-        label Identifier
-        input.form-control(type='text', ng-model='region.identifier')
-      .form-group
-        label UUID
-        input.form-control(type='text', ng-model='region.uuid')
-      .form-group
-        label Major
-        input.form-control(type='text', ng-model='region.major')
-      .form-group
-        label Minor
-        input.form-control(type='text', ng-model='region.minor')
-      
-      button.btn.btn-default(type='button', ng-click='onStopClick()') Stop
-      button.btn.btn-primary(type='button', ng-click='onBroadcastClick()') Broadcast
+    .row
+      .col-xs-12
+        form.region
+          .form-group
+            label UUID
+            input.form-control(type='text', ng-model='regionConfig.uuid')
+    .row
+      .col-xs-6
+        button.btn.btn-primary.btn-block(type='button', ng-click='onStartMonitoringClick()') Start Monitoring
+      .col-xs-6
+        button.btn.btn-warning.btn-block(type='button', ng-click='onStopMonitoringClick()') Stop Monitoring
+    br
+    .row
+      .col-xs-6
+        button.btn.btn-primary.btn-block(type='button', ng-click='onStartRangingClick()') Start Ranging
+      .col-xs-6
+        button.btn.btn-warning.btn-block(type='button', ng-click='onStopRangingClick()') Stop Ranging
+    br
+    .row
+      .col-xs-6
+        button.btn.btn-primary.btn-block(type='button', ng-click='onRequestStateClick()') Request State
+      .col-xs-6
+        button.btn.btn-danger.btn-block(type='button', ng-click='onClearConsoleClick()') Clear Console
 
     br
     pre
       | {{ status | json }}
+
+    pre.log
+      span(ng-repeat='row in logStack track by $index') {{ row }}

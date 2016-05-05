@@ -1,0 +1,1 @@
+grunt --livereload=false --targetdir=www --cordova=true
